@@ -28,6 +28,10 @@ export const products: Product[] = [
     status: "MVP · In development",
     category: "Education · SaaS",
     href: "https://lessonara.mosaic-labs.co",
-    features: ["Lesson planning", "Student organization", "Materials & activities"],
+    features: [
+      "Lesson planning",
+      "Student organization",
+      "Materials & activities",
+    ],
   },
 ];

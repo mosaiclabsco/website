@@ -1,35 +1,34 @@
-# Mosaic Labs
+# Mosaic Labs — studio v2
 
-Institutional website built with Next.js App Router, TypeScript, and Tailwind CSS 4. Original supplied brand assets and locally served Satoshi fonts. No database, forms, tracking, or transactional email service required.
+An evolution of the original website, built on the same Next.js, TypeScript, Tailwind, fonts, and supplied brand assets.
 
-## Run locally
+## Compare versions
 
-Requires Node.js 20.9 or later.
+The original checkout at `../mosaic-labs` stays on `main` (baseline commit `77a53c1`). This checkout uses branch `design/studio-v2`.
 
-```sh
-npm install
-npm run dev
-```
-
-Open http://localhost:3000.
-
-## Validate
+- Original preview: http://localhost:3040
+- Redesigned preview: http://localhost:3041/en
 
 ```sh
-npm run typecheck
+npm ci
+npm run dev -- --port 3041
 npm run build
 ```
 
-## Content
+## Languages and content
 
-Edit the email, domain, and product collection in `lib/site.ts`. Add product entries to the array to create additional cards. The Lessonara workspace is an explicitly labeled concept illustration, not a screenshot of the live product. Replace or extend its component for future products.
+Routes: `/en`, `/pt-br`, `/fr`, `/es`. The root redirects to `/en`. The language selector preserves the current section. Each locale has its own HTML language, title, description, canonical URL, and alternate-language links. Translations are in `lib/dictionaries/` and checked against one shared TypeScript shape.
 
-Official logo files are preserved in `public/brand`. The wordmark uses the supplied raster logo; it is not recreated in another typeface. Interface typography is Satoshi, downloaded from the official Fontshare CDN. The four logo colors are #1464C0, #EF6545, #F4B942, and #0B9E8A.
+Contact and product destinations are in `lib/site.ts`. To add a product, add its catalog entry there, then add a matching slug to `products.catalog` in **all four** translation files. The page renders the collection without changes to its section layout; add a custom product visual as needed.
 
-Light and dark mode follow the device preference until the visitor chooses a theme. The choice is saved locally. Motion respects the visitor's reduced-motion setting.
+The Lessonara interface is an explicitly labeled concept, not a screenshot of the live product.
 
-## Deploy to Vercel
+## Design
 
-Import this folder's repository into Vercel. Use the default Next.js preset, `npm run build`, and no environment variables. Add `mosaic-labs.co` to the Vercel project and apply the DNS records shown by Vercel in Cloudflare. This project does not modify DNS or provision infrastructure.
+Visual references were opened and captured in the browser: Killswitch, CoachBase, Mosaic Labs LLC, Outpost Labs, Evermade, Oddwork, and Mosaic.com. The redesign favors the quiet typography of CoachBase and product emphasis of Outpost, with a restrained brand composition instead of unrelated illustrations.
 
-Before publishing, confirm the contact email in `lib/site.ts` and that the Lessonara destination is ready for visitors.
+The supplied logo geometry, original raster wordmark, and exact four colors are retained. Interface typography is locally served Satoshi. Motion uses transforms on the original SVG shapes, subtle pointer response, scroll entrances, link and product hovers, and native expandable principles. Reduced-motion preferences disable decorative motion. Both light and dark modes are supported.
+
+## Hosting
+
+Ready for Vercel using its Next.js preset. No environment variables are needed. Add `mosaic-labs.co` to Vercel and apply its provided DNS records in Cloudflare when deploying. No infrastructure or DNS changes have been made.

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Mosaic Labs — Construisons nos idées ensemble",
+    "description": "Un studio indépendant de logiciels et de produits numériques. Des idées différentes, conçues avec soin. Découvrez Lessonara et les produits de Mosaic Labs."
+  },
+  "nav": {
+    "studio": "Studio",
+    "products": "Produits",
+    "approach": "Principes",
+    "contact": "Parlons-en",
+    "language": "Langue"
+  },
+  "access": {
+    "skip": "Aller au contenu",
+    "home": "Mosaic Labs — accueil",
+    "theme": "Activer ou désactiver le mode sombre",
+    "open": "Ouvrir la navigation",
+    "close": "Fermer la navigation",
+    "newTab": "s’ouvre dans un nouvel onglet",
+    "art": "Déplacez le curseur pour rapprocher les pièces"
+  },
+  "hero": {
+    "label": "Studio indépendant de logiciels et de produits",
+    "first": "Des idées différentes.",
+    "second": "Une vision commune.",
+    "description": "Nous transformons des idées indépendantes en produits numériques conçus avec soin. Guidés par leur utilité. Reliés par la curiosité.",
+    "cta": "Découvrez notre premier produit",
+    "note": "Construisons nos idées ensemble",
+    "caption": "Des pièces individuelles. Des possibilités partagées.",
+    "scroll": "Défiler pour découvrir"
+  },
+  "studio": {
+    "label": "Le studio",
+    "heading": "De la place pour les idées différentes.",
+    "intro": "Une mosaïque est faite de pièces individuelles. Chacune a sa propre forme. Ensemble, elles deviennent quelque chose de plus grand.",
+    "body": "Mosaic Labs est un espace indépendant pour les logiciels, les expérimentations et les produits numériques. Chaque projet a sa propre identité, relié aux autres par une même façon de penser : rester curieux, soigner les détails et construire quelque chose d’utile.",
+    "ending": "Nous en sommes au début. Notre premier produit prend forme, et nous gardons de la place pour la suite."
+  },
+  "products": {
+    "label": "Produits en cours de création",
+    "heading": "Créés ici.",
+    "note": "Une collection d’idées indépendantes qui s’agrandit.",
+    "next": "La première pièce. D’autres suivront.",
+    "catalog": {
+      "lessonara": {
+        "category": "Éducation / SaaS",
+        "status": "MVP · En développement",
+        "tagline": "Plus d’enseignement. Moins de jonglage.",
+        "description": "Une façon plus simple d’organiser l’enseignement. Un espace pour les professeurs d’anglais afin de gérer cours, élèves, supports et activités.",
+        "features": ["Cours", "Élèves", "Supports", "Activités"],
+        "cta": "Découvrir Lessonara",
+        "concept": "Concept d’interface · Produit en développement"
+      }
+    }
+  },
+  "principles": {
+    "label": "Nos principes",
+    "heading": "Un peu d’intention fait toute la différence.",
+    "note": "Quatre principes qui guident nos choix.",
+    "items": [
+      {
+        "title": "Construire avec un objectif.",
+        "text": "Identifier un vrai besoin avant d’écrire la première ligne. Chaque produit doit mériter sa place dans le quotidien de quelqu’un."
+      },
+      {
+        "title": "Faire simple.",
+        "text": "Rendre l’essentiel facile à trouver. Supprimer les étapes inutiles. Donner aux gens moins de choses auxquelles penser."
+      },
+      {
+        "title": "Expérimenter. Puis améliorer.",
+        "text": "Donner leur chance aux idées, même inattendues. Apprendre de ce qui fonctionne, écouter ce qui ne fonctionne pas et progresser."
+      },
+      {
+        "title": "Créer ce qui compte.",
+        "text": "Soigner les petites décisions. Construire pour les personnes qui utiliseront le produit, bien au-delà de la première impression."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Restons en contact",
+    "heading": "Relions nos idées.",
+    "text": "Une idée, une question ou simplement un bonjour. Il y a de la place pour une conversation.",
+    "cta": "Dites-nous bonjour"
+  },
+  "footer": {
+    "tagline": "Construisons nos idées ensemble",
+    "independent": "Indépendants par choix.",
+    "top": "Retour en haut",
+    "copyright": "Tous droits réservés."
+  },
+  "preview": {
+    "label": "Votre espace d’enseignement",
+    "overview": "Vue d’ensemble",
+    "lessons": "Cours",
+    "students": "Élèves",
+    "materials": "Supports",
+    "heading": "Une belle journée pour enseigner.",
+    "subtitle": "Tout ce qu’il vous faut. Un peu moins de bruit.",
+    "week": "Votre plan de cours",
+    "days": ["LUN", "MAR", "MER"],
+    "conversation": "Conversation",
+    "activity": "Activité",
+    "lesson": "Cours",
+    "speaking": "Parlons de nos idées",
+    "vocabulary": "Les mots en contexte",
+    "english": "L’anglais au quotidien",
+    "bottom": "Vos supports, réunis."
+  }
+}

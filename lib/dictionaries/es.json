@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Mosaic Labs — Construimos ideas juntos",
+    "description": "Un estudio independiente de software y productos digitales. Ideas diferentes, creadas con cuidado. Descubre Lessonara y los productos de Mosaic Labs."
+  },
+  "nav": {
+    "studio": "Estudio",
+    "products": "Productos",
+    "approach": "Principios",
+    "contact": "Hablemos",
+    "language": "Idioma"
+  },
+  "access": {
+    "skip": "Ir al contenido",
+    "home": "Mosaic Labs — inicio",
+    "theme": "Alternar modo oscuro",
+    "open": "Abrir navegación",
+    "close": "Cerrar navegación",
+    "newTab": "se abre en una nueva pestaña",
+    "art": "Mueve el cursor para acercar las piezas"
+  },
+  "hero": {
+    "label": "Estudio independiente de software y productos",
+    "first": "Ideas diferentes.",
+    "second": "Una visión compartida.",
+    "description": "Transformamos ideas independientes en productos digitales hechos con cuidado. Guiados por un propósito. Conectados por la curiosidad.",
+    "cta": "Conoce nuestro primer producto",
+    "note": "Construimos ideas juntos",
+    "caption": "Piezas individuales. Posibilidades compartidas.",
+    "scroll": "Desliza para explorar"
+  },
+  "studio": {
+    "label": "El estudio",
+    "heading": "Espacio para ideas diferentes.",
+    "intro": "Un mosaico está hecho de piezas individuales. Cada una tiene su propia forma. Juntas, se convierten en algo más grande.",
+    "body": "Mosaic Labs es un espacio independiente para software, experimentos y productos digitales. Cada proyecto tiene su propia identidad, conectado por una forma de pensar: mantener la curiosidad, cuidar los detalles y construir algo útil.",
+    "ending": "Estamos empezando. Nuestro primer producto está tomando forma, y dejamos espacio para lo que viene después."
+  },
+  "products": {
+    "label": "Productos en construcción",
+    "heading": "Hechos aquí.",
+    "note": "Una colección de ideas independientes que sigue creciendo.",
+    "next": "La primera pieza. Vendrán más.",
+    "catalog": {
+      "lessonara": {
+        "category": "Educación / SaaS",
+        "status": "MVP · En desarrollo",
+        "tagline": "Más enseñanza. Menos malabares.",
+        "description": "Una forma más sencilla de organizar la enseñanza. Un espacio para que los profesores de inglés gestionen clases, alumnos, materiales y actividades.",
+        "features": ["Clases", "Alumnos", "Materiales", "Actividades"],
+        "cta": "Descubre Lessonara",
+        "concept": "Concepto de interfaz · Producto en desarrollo"
+      }
+    }
+  },
+  "principles": {
+    "label": "Nuestros principios",
+    "heading": "Un poco de intención marca la diferencia.",
+    "note": "Cuatro principios que guían nuestras decisiones.",
+    "items": [
+      {
+        "title": "Construir con propósito.",
+        "text": "Encontrar una necesidad real antes de escribir la primera línea. Cada producto debe ganarse un lugar en el día de alguien."
+      },
+      {
+        "title": "Mantener la sencillez.",
+        "text": "Hacer que lo útil sea fácil de encontrar. Quitar pasos innecesarios. Dar a las personas menos cosas en las que pensar."
+      },
+      {
+        "title": "Experimentar. Y mejorar.",
+        "text": "Dar una oportunidad a las ideas, incluso a las inesperadas. Aprender de lo que funciona, escuchar lo que no y seguir mejorando."
+      },
+      {
+        "title": "Crear lo que importa.",
+        "text": "Cuidar las pequeñas decisiones. Construir para quienes usarán el producto y para los días después de la primera impresión."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Sigamos en contacto",
+    "heading": "Conectemos las ideas.",
+    "text": "Una idea, una pregunta o un simple hola. Hay espacio para una conversación.",
+    "cta": "Dinos hola"
+  },
+  "footer": {
+    "tagline": "Construimos ideas juntos",
+    "independent": "Independientes por elección.",
+    "top": "Volver arriba",
+    "copyright": "Todos los derechos reservados."
+  },
+  "preview": {
+    "label": "Tu espacio de enseñanza",
+    "overview": "Vista general",
+    "lessons": "Clases",
+    "students": "Alumnos",
+    "materials": "Materiales",
+    "heading": "Un buen día para enseñar.",
+    "subtitle": "Todo lo que necesitas. Un poco menos de ruido.",
+    "week": "Tu plan de clases",
+    "days": ["LUN", "MAR", "MIÉ"],
+    "conversation": "Conversación",
+    "activity": "Actividad",
+    "lesson": "Clase",
+    "speaking": "Hablemos de ideas",
+    "vocabulary": "Palabras en contexto",
+    "english": "Inglés cotidiano",
+    "bottom": "Tus materiales, juntos."
+  }
+}
