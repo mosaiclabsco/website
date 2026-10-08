@@ -80,7 +80,7 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
                   </MagneticLink>
                 </div>
                 {product.slug === "lessonara" ? (
-                  <LessonaraShowcase alt={copy.imageAlt} />
+                  <LessonaraShowcase text={d.preview} concept={copy.concept} />
                 ) : (
                   <div className="product-photo">
                     <img

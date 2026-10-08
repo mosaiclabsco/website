@@ -1,0 +1,239 @@
+/* Localized interface concept restored from v1, with Lessonara's actual identity. */
+.lessonara-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 27px;
+  padding: 40px 25px 25px;
+}
+.lessonara-ui {
+  background: #fffefa;
+  font-family: "Lessonara Geist", sans-serif;
+  color: #283d39;
+}
+.lessonara-ui-toolbar {
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e7ece9;
+  font-size: 8px;
+  color: #74827f;
+}
+.lessonara-ui-dots {
+  display: flex;
+  gap: 4px;
+}
+.lessonara-ui-dots i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #d7e0d8;
+}
+.lessonara-ui-workspace {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  min-height: 310px;
+}
+.lessonara-ui-sidebar {
+  border-right: 1px solid #e7ece9;
+  padding: 20px 9px;
+}
+.lessonara-ui .lessonara-brand-lockup {
+  --lessonara-mark-bg: #fffefa;
+  color: #283d39;
+  font-size: 14px;
+  gap: 5px;
+  margin-bottom: 26px;
+  letter-spacing: -0.048em;
+}
+.lessonara-ui .lessonara-brand-lockup > svg {
+  width: 22px;
+  height: 22px;
+  color: #3e7163;
+}
+.lessonara-ui-nav {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 7px;
+  margin-bottom: 5px;
+  font-size: 8px;
+  color: #74827f;
+  border-radius: 4px;
+}
+.lessonara-ui-nav.selected {
+  background: #eaf2ed;
+  color: #3e7163;
+}
+.lessonara-ui-nav svg {
+  flex-shrink: 0;
+}
+.lessonara-ui-main {
+  padding: 24px 20px;
+}
+.lessonara-ui-eyebrow {
+  font-size: 7px;
+  color: #74827f;
+}
+.lessonara-ui-main h4 {
+  font-family: "Lessonara Geist", sans-serif;
+  color: #283d39;
+  font-size: 23px;
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin-top: 7px;
+}
+.lessonara-ui-main > p {
+  font-size: 8px;
+  color: #74827f;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+.lessonara-ui-plan-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+.lessonara-ui-plan-heading strong {
+  font-weight: 550;
+}
+.lessonara-ui-planner {
+  border: 1px solid #e7ece9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.lessonara-ui-days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-size: 6px;
+  padding: 8px 0;
+  color: #74827f;
+  background: #f7f9f4;
+}
+.lessonara-ui-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  padding: 14px 7px 10px;
+  min-height: 106px;
+  align-items: start;
+  background-image: linear-gradient(#e7ece9 1px, transparent 1px);
+  background-size: 100% 30px;
+}
+.lessonara-ui-lesson {
+  padding: 8px 6px;
+  min-height: 63px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.lessonara-ui-lesson span {
+  font-size: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.lessonara-ui-lesson strong {
+  font-size: 8px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.lessonara-ui-lesson.speaking {
+  background: #e0eee6;
+  color: #3e7163;
+}
+.lessonara-ui-lesson.vocabulary {
+  background: #e8f0dd;
+  color: #60754a;
+  margin-top: 12px;
+}
+.lessonara-ui-lesson.listening {
+  background: #f5e9db;
+  color: #976e4a;
+  margin-top: 5px;
+}
+.lessonara-ui-materials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 8px;
+  border: 1px solid #e7ece9;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 16px;
+  color: #74827f;
+}
+.lessonara-ui-materials > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lessonara-ui-caption {
+  align-self: flex-start;
+  font-size: 8px;
+  line-height: 1.5;
+  color: #60715e;
+}
+@media (max-width: 1023px) {
+  .lessonara-ui-workspace {
+    grid-template-columns: 87px minmax(0, 1fr);
+    min-height: 270px;
+  }
+  .lessonara-ui-sidebar {
+    padding: 18px 6px;
+  }
+  .lessonara-ui .lessonara-brand-lockup {
+    font-size: 11px;
+    gap: 3px;
+  }
+  .lessonara-ui .lessonara-brand-lockup > svg {
+    width: 18px;
+    height: 18px;
+  }
+  .lessonara-ui-main {
+    padding: 21px 13px;
+  }
+  .lessonara-ui-main h4 {
+    font-size: 20px;
+  }
+  .lessonara-ui-nav {
+    font-size: 7px;
+    gap: 4px;
+    padding: 8px 5px;
+  }
+}
+@media (max-width: 767px) {
+  .lessonara-showcase {
+    min-height: 0;
+    gap: 24px;
+    padding: 27px 17px 19px;
+  }
+  .lessonara-ui-workspace {
+    grid-template-columns: 79px minmax(0, 1fr);
+    min-height: 258px;
+  }
+  .lessonara-ui-main {
+    padding: 19px 11px;
+  }
+  .lessonara-ui-main h4 {
+    font-size: 18px;
+  }
+  .lessonara-ui-lesson strong {
+    font-size: 7px;
+  }
+  .lessonara-ui-materials {
+    font-size: 7px;
+    padding: 8px;
+  }
+  .lessonara-ui-caption {
+    font-size: 7px;
+  }
+}
