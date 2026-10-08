@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mosaic Labs — Build Ideas Together",
+    "title": "Mosaic Labs - Build Ideas Together",
     "description": "An independent software and product studio. Different ideas, thoughtfully built. Discover Lessonara and the products taking shape at Mosaic Labs."
   },
   "nav": {
@@ -12,7 +12,7 @@
   },
   "access": {
     "skip": "Skip to content",
-    "home": "Mosaic Labs — home",
+    "home": "Mosaic Labs - home",
     "theme": "Toggle dark mode",
     "open": "Open navigation",
     "close": "Close navigation",
@@ -23,8 +23,8 @@
     "label": "Independent software & product studio",
     "first": "Different ideas.",
     "second": "One bigger picture.",
-    "description": "We turn independent ideas into thoughtful digital products. Useful by purpose. Connected by curiosity.",
-    "cta": "Meet our first product",
+    "description": "We build independent software products for everyday needs. Lessonara is our first.",
+    "cta": "Products",
     "note": "Build Ideas Together",
     "caption": "Individual pieces. Shared possibilities.",
     "scroll": "Scroll to explore"
@@ -33,7 +33,7 @@
     "label": "The studio",
     "heading": "Room for different ideas.",
     "intro": "A mosaic is made of individual pieces. Each one has its own shape. Together, they become something more.",
-    "body": "Mosaic Labs is an independent home for software, experiments, and digital products. Every project stands on its own, connected by a shared way of thinking: stay curious, care about the details, and build something useful.",
+    "body": "We create independent software and digital products. Each project has its own identity, with the same attention to usability, craft, and everyday needs.",
     "ending": "We’re at the beginning. Our first product is taking shape, and we’re leaving room for what comes next."
   },
   "products": {
@@ -49,13 +49,14 @@
         "description": "A simpler way to manage teaching. One space for English teachers to organize lessons, students, materials, and activities.",
         "features": ["Lessons", "Students", "Materials", "Activities"],
         "cta": "Explore Lessonara",
-        "concept": "Workspace concept · Product in development"
+        "concept": "Workspace concept · Product in development",
+        "imageAlt": "Concept image of a notebook, pencil and study cards for lesson preparation."
       }
     }
   },
   "principles": {
     "label": "Our approach",
-    "heading": "A little intention goes a long way.",
+    "heading": "How we build.",
     "note": "Four principles we come back to.",
     "items": [
       {
@@ -78,9 +79,9 @@
   },
   "contact": {
     "label": "Keep in touch",
-    "heading": "Let’s connect the dots.",
+    "heading": "Let’s talk.",
     "text": "An idea, a question, or a simple hello. There’s room for a conversation.",
-    "cta": "Say hello"
+    "cta": "Let’s talk"
   },
   "footer": {
     "tagline": "Build Ideas Together",

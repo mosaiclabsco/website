@@ -1,34 +1,39 @@
-# Mosaic Labs — studio v2
+# Mosaic Labs - studio v3
 
-An evolution of the original website, built on the same Next.js, TypeScript, Tailwind, fonts, and supplied brand assets.
+Third design line, based on `design/studio-v2`. Original (`main`) and second version are preserved in their separate worktrees.
 
-## Compare versions
+## Preview
 
-The original checkout at `../mosaic-labs` stays on `main` (baseline commit `77a53c1`). This checkout uses branch `design/studio-v2`.
-
-- Original preview: http://localhost:3040
-- Redesigned preview: http://localhost:3041/en
+- Original: http://localhost:3040
+- V2: http://localhost:3041/pt-br
+- V3: http://localhost:3042/pt-br
 
 ```sh
 npm ci
-npm run dev -- --port 3041
+npm run dev -- --port 3042
 npm run build
 ```
 
-## Languages and content
+## Design direction
 
-Routes: `/en`, `/pt-br`, `/fr`, `/es`. The root redirects to `/en`. The language selector preserves the current section. Each locale has its own HTML language, title, description, canonical URL, and alternate-language links. Translations are in `lib/dictionaries/` and checked against one shared TypeScript shape.
+Applied Leonxlnx Taste Skill (`skills/taste-skill/SKILL.md`) and its redesign guide. Design read: an independent product studio with a graphic, asymmetric composition. Dials: DESIGN_VARIANCE 8, MOTION_INTENSITY 6, VISUAL_DENSITY 3. This is a native CSS/Tailwind aesthetic, not an imitation of an official component design system.
 
-Contact and product destinations are in `lib/site.ts`. To add a product, add its catalog entry there, then add a matching slug to `products.catalog` in **all four** translation files. The page renders the collection without changes to its section layout; add a custom product visual as needed.
+Clash Grotesk display typography replaces Satoshi in headings. Satoshi remains for body/UI text; the supplied logo wordmark is untouched. Fonts are served locally from the official Fontshare source. Both themes stay consistent across the page. All four original logo colors are preserved in the official symbol; interface accents use the original blue.
 
-The Lessonara interface is an explicitly labeled concept, not a screenshot of the live product.
+Removed numbered section eyebrows, ornamental lines and scroll labels, the fictitious Lessonara UI preview, and the bordered principles accordion. Negative space, asymmetry and image scale now establish hierarchy. Controls use pill corners; media uses 24px corners. Layer scale: content 0, sticky nav 10, mobile menu 20, skip link 30.
 
-## Design
+Retained the moving original SVG pieces. Motion springs implement restrained pointer response and magnetic CTA feedback outside the React render cycle. Scroll entrances use IntersectionObserver. All decorative motion respects reduced-motion preferences.
 
-Visual references were opened and captured in the browser: Killswitch, CoachBase, Mosaic Labs LLC, Outpost Labs, Evermade, Oddwork, and Mosaic.com. The redesign favors the quiet typography of CoachBase and product emphasis of Outpost, with a restrained brand composition instead of unrelated illustrations.
+## Content and languages
 
-The supplied logo geometry, original raster wordmark, and exact four colors are retained. Interface typography is locally served Satoshi. Motion uses transforms on the original SVG shapes, subtle pointer response, scroll entrances, link and product hovers, and native expandable principles. Reduced-motion preferences disable decorative motion. Both light and dark modes are supported.
+Routes remain `/en`, `/pt-br`, `/fr`, `/es`, with translated metadata, canonical URLs, language alternatives and a native selector. `/` redirects to `/en`. Anchors and primary navigation remain stable. Add new products in `lib/site.ts`, with a matching slug in `products.catalog` in all four dictionaries.
+
+## Image asset
+
+`public/images/lessonara-editorial.png` was generated with the built-in ImageGen tool as conceptual editorial imagery. It is not a photo of the company, an office, a real Lessonara screen, or a customer.
+
+Generation prompt: “Use case: photorealistic-natural. Asset type: editorial still-life for the Lessonara education SaaS section of an independent product studio website. Create one refined real-looking editorial photograph, landscape 4:3 aspect ratio. Top-down crop with a slight angle: a navy cloth notebook opened to unmarked off-white paper, a graphite pencil, two simple small rounded-corner study cards in muted cobalt #1464C0 and coral #EF6545, a small mustard #F4B942 page tab, all carefully but naturally arranged on a cool light grey tabletop. Paper textures and gentle natural window shadows, restrained composition, tangible and understated, very high photographic quality, no contrived perfect symmetry. Focus is thoughtful lesson preparation, no people, no room, no office, no laptop or screen. The notebook and materials mostly occupy the lower-right and central frame, calm negative space in upper-left. No text, no letters, no logos, no software interface, no branded products, no watermarks, no gradients, no floating objects, no 3D CGI plastic sheen. This is conceptual editorial imagery rather than documentation of a real company’s workplace.”
 
 ## Hosting
 
-Ready for Vercel using its Next.js preset. No environment variables are needed. Add `mosaic-labs.co` to Vercel and apply its provided DNS records in Cloudflare when deploying. No infrastructure or DNS changes have been made.
+Vercel Next.js preset, no environment variables. Contact remains contact@mosaic-labs.co. No DNS changes or deployments have been performed.

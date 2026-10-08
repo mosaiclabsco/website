@@ -74,7 +74,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link
           rel="preload"
-          href="/fonts/satoshi-700.woff2"
+          href="/fonts/clash-grotesk-500.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

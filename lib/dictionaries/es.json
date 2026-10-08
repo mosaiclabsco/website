@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mosaic Labs — Construimos ideas juntos",
+    "title": "Mosaic Labs - Construimos ideas juntos",
     "description": "Un estudio independiente de software y productos digitales. Ideas diferentes, creadas con cuidado. Descubre Lessonara y los productos de Mosaic Labs."
   },
   "nav": {
@@ -12,7 +12,7 @@
   },
   "access": {
     "skip": "Ir al contenido",
-    "home": "Mosaic Labs — inicio",
+    "home": "Mosaic Labs - inicio",
     "theme": "Alternar modo oscuro",
     "open": "Abrir navegación",
     "close": "Cerrar navegación",
@@ -23,8 +23,8 @@
     "label": "Estudio independiente de software y productos",
     "first": "Ideas diferentes.",
     "second": "Una visión compartida.",
-    "description": "Transformamos ideas independientes en productos digitales hechos con cuidado. Guiados por un propósito. Conectados por la curiosidad.",
-    "cta": "Conoce nuestro primer producto",
+    "description": "Creamos productos digitales independientes para las necesidades del día a día. Lessonara es el primero.",
+    "cta": "Productos",
     "note": "Construimos ideas juntos",
     "caption": "Piezas individuales. Posibilidades compartidas.",
     "scroll": "Desliza para explorar"
@@ -33,7 +33,7 @@
     "label": "El estudio",
     "heading": "Espacio para ideas diferentes.",
     "intro": "Un mosaico está hecho de piezas individuales. Cada una tiene su propia forma. Juntas, se convierten en algo más grande.",
-    "body": "Mosaic Labs es un espacio independiente para software, experimentos y productos digitales. Cada proyecto tiene su propia identidad, conectado por una forma de pensar: mantener la curiosidad, cuidar los detalles y construir algo útil.",
+    "body": "Creamos software y productos digitales independientes. Cada proyecto tiene su identidad, con la misma atención a la usabilidad y las necesidades del día a día.",
     "ending": "Estamos empezando. Nuestro primer producto está tomando forma, y dejamos espacio para lo que viene después."
   },
   "products": {
@@ -49,13 +49,14 @@
         "description": "Una forma más sencilla de organizar la enseñanza. Un espacio para que los profesores de inglés gestionen clases, alumnos, materiales y actividades.",
         "features": ["Clases", "Alumnos", "Materiales", "Actividades"],
         "cta": "Descubre Lessonara",
-        "concept": "Concepto de interfaz · Producto en desarrollo"
+        "concept": "Concepto de interfaz · Producto en desarrollo",
+        "imageAlt": "Imagen conceptual de un cuaderno, lápiz y tarjetas de estudio para preparar clases."
       }
     }
   },
   "principles": {
     "label": "Nuestros principios",
-    "heading": "Un poco de intención marca la diferencia.",
+    "heading": "Cómo construimos.",
     "note": "Cuatro principios que guían nuestras decisiones.",
     "items": [
       {
@@ -78,9 +79,9 @@
   },
   "contact": {
     "label": "Sigamos en contacto",
-    "heading": "Conectemos las ideas.",
+    "heading": "Hablemos.",
     "text": "Una idea, una pregunta o un simple hola. Hay espacio para una conversación.",
-    "cta": "Dinos hola"
+    "cta": "Hablemos"
   },
   "footer": {
     "tagline": "Construimos ideas juntos",

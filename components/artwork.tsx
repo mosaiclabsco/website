@@ -1,42 +1,39 @@
 "use client";
-import { useRef } from "react";
+
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useReducedMotion,
+} from "motion/react";
 import { officialMark } from "@/lib/official-mark";
-export function Artwork({ caption }: { caption: string }) {
-  const ref = useRef<HTMLDivElement>(null);
+
+export function Artwork() {
+  const reduce = useReducedMotion();
+  const pointerX = useMotionValue(0);
+  const pointerY = useMotionValue(0);
+  const x = useSpring(pointerX, { stiffness: 90, damping: 22 });
+  const y = useSpring(pointerY, { stiffness: 90, damping: 22 });
   return (
     <div
       className="artwork"
-      ref={ref}
       aria-hidden="true"
       onPointerMove={(event) => {
-        if (
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-          event.pointerType === "touch"
-        )
-          return;
-        const box = event.currentTarget.getBoundingClientRect();
-        ref.current?.style.setProperty(
-          "--pointer-x",
-          `${((event.clientX - box.left) / box.width - 0.5) * 16}px`,
-        );
-        ref.current?.style.setProperty(
-          "--pointer-y",
-          `${((event.clientY - box.top) / box.height - 0.5) * 16}px`,
-        );
+        if (reduce || event.pointerType === "touch") return;
+        const bounds = event.currentTarget.getBoundingClientRect();
+        pointerX.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 22);
+        pointerY.set(((event.clientY - bounds.top) / bounds.height - 0.5) * 22);
       }}
       onPointerLeave={() => {
-        ref.current?.style.setProperty("--pointer-x", "0px");
-        ref.current?.style.setProperty("--pointer-y", "0px");
+        pointerX.set(0);
+        pointerY.set(0);
       }}
     >
-      <div
+      <motion.div
         className="artwork-mark"
+        style={reduce ? undefined : { x, y }}
         dangerouslySetInnerHTML={{ __html: officialMark }}
       />
-      <div className="artwork-caption">
-        <span>ML / 001</span>
-        <span>{caption}</span>
-      </div>
     </div>
   );
 }

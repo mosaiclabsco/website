@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import type { Dictionary } from "@/lib/dictionaries";
 import { locales, languageNames, type Locale } from "@/lib/locales";
 import { Brand } from "./brand";
-import { Arrow, Moon, Sun } from "./icons";
+import { Arrow, Moon, Sun, Globe } from "./icons";
 
 export function Header({
   locale,
@@ -69,18 +69,7 @@ export function Header({
         <div className="header-actions">
           <label className="language-control">
             <span className="sr-only">{nav.language}</span>
-            <svg
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <circle cx="10" cy="10" r="7.5" />
-              <ellipse cx="10" cy="10" rx="3.3" ry="7.5" />
-              <path d="M3 7h14M3 13h14" />
-            </svg>
+            <Globe />
             <select
               aria-label={nav.language}
               value={locale}

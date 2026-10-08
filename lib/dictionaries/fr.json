@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mosaic Labs — Construisons nos idées ensemble",
+    "title": "Mosaic Labs - Construisons nos idées ensemble",
     "description": "Un studio indépendant de logiciels et de produits numériques. Des idées différentes, conçues avec soin. Découvrez Lessonara et les produits de Mosaic Labs."
   },
   "nav": {
@@ -12,7 +12,7 @@
   },
   "access": {
     "skip": "Aller au contenu",
-    "home": "Mosaic Labs — accueil",
+    "home": "Mosaic Labs - accueil",
     "theme": "Activer ou désactiver le mode sombre",
     "open": "Ouvrir la navigation",
     "close": "Fermer la navigation",
@@ -23,8 +23,8 @@
     "label": "Studio indépendant de logiciels et de produits",
     "first": "Des idées différentes.",
     "second": "Une vision commune.",
-    "description": "Nous transformons des idées indépendantes en produits numériques conçus avec soin. Guidés par leur utilité. Reliés par la curiosité.",
-    "cta": "Découvrez notre premier produit",
+    "description": "Nous créons des produits numériques indépendants pour les besoins du quotidien. Lessonara est le premier.",
+    "cta": "Produits",
     "note": "Construisons nos idées ensemble",
     "caption": "Des pièces individuelles. Des possibilités partagées.",
     "scroll": "Défiler pour découvrir"
@@ -33,7 +33,7 @@
     "label": "Le studio",
     "heading": "De la place pour les idées différentes.",
     "intro": "Une mosaïque est faite de pièces individuelles. Chacune a sa propre forme. Ensemble, elles deviennent quelque chose de plus grand.",
-    "body": "Mosaic Labs est un espace indépendant pour les logiciels, les expérimentations et les produits numériques. Chaque projet a sa propre identité, relié aux autres par une même façon de penser : rester curieux, soigner les détails et construire quelque chose d’utile.",
+    "body": "Nous créons des logiciels et des produits numériques indépendants. Chaque projet a son identité, avec la même attention à l’usage et aux besoins du quotidien.",
     "ending": "Nous en sommes au début. Notre premier produit prend forme, et nous gardons de la place pour la suite."
   },
   "products": {
@@ -49,13 +49,14 @@
         "description": "Une façon plus simple d’organiser l’enseignement. Un espace pour les professeurs d’anglais afin de gérer cours, élèves, supports et activités.",
         "features": ["Cours", "Élèves", "Supports", "Activités"],
         "cta": "Découvrir Lessonara",
-        "concept": "Concept d’interface · Produit en développement"
+        "concept": "Concept d’interface · Produit en développement",
+        "imageAlt": "Image conceptuelle d’un carnet, d’un crayon et de fiches pour préparer des cours."
       }
     }
   },
   "principles": {
     "label": "Nos principes",
-    "heading": "Un peu d’intention fait toute la différence.",
+    "heading": "Notre façon de construire.",
     "note": "Quatre principes qui guident nos choix.",
     "items": [
       {
@@ -78,9 +79,9 @@
   },
   "contact": {
     "label": "Restons en contact",
-    "heading": "Relions nos idées.",
+    "heading": "Parlons-en.",
     "text": "Une idée, une question ou simplement un bonjour. Il y a de la place pour une conversation.",
-    "cta": "Dites-nous bonjour"
+    "cta": "Parlons-en"
   },
   "footer": {
     "tagline": "Construisons nos idées ensemble",
