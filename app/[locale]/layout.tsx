@@ -4,6 +4,7 @@ import { dictionaries } from "@/lib/dictionaries";
 import { isLocale, locales, languageTags } from "@/lib/locales";
 import { site } from "@/lib/site";
 import "../globals.css";
+import "../refinements.css";
 
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 export function generateStaticParams() {

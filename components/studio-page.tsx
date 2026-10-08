@@ -1,10 +1,12 @@
-import Image from "next/image";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/lib/locales";
 import { Header } from "./header";
 import { Brand } from "./brand";
 import { Arrow } from "./icons";
 import { Artwork } from "./artwork";
+import { LessonaraBrand } from "./lessonara-brand";
+import { LessonaraShowcase } from "./lessonara-showcase";
+import { MosaicPiece } from "./mosaic-piece";
 import { MagneticLink } from "./magnetic-link";
 import { Reveal } from "./reveal";
 import { site, products } from "@/lib/site";
@@ -56,27 +58,15 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
               );
             return (
               <article className="product-composition" key={product.slug}>
-                <div className="product-photo" data-reveal>
-                  {product.slug === "lessonara" ? (
-                    <Image
-                      src="/images/lessonara-editorial.png"
-                      alt={copy.imageAlt}
-                      width={1448}
-                      height={1086}
-                      sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 55vw, 720px"
-                    />
-                  ) : (
-                    <img
-                      src="/brand/icon.svg"
-                      width={256}
-                      height={256}
-                      alt=""
-                    />
-                  )}
-                </div>
                 <div className="product-information" data-reveal>
                   <p className="product-status">{copy.status}</p>
-                  <h3>{product.name}</h3>
+                  <h3>
+                    {product.slug === "lessonara" ? (
+                      <LessonaraBrand />
+                    ) : (
+                      product.name
+                    )}
+                  </h3>
                   <h4>{copy.tagline}</h4>
                   <p className="product-description">{copy.description}</p>
                   <div className="product-features">
@@ -89,6 +79,18 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
                     <span className="sr-only"> ({d.access.newTab})</span>
                   </MagneticLink>
                 </div>
+                {product.slug === "lessonara" ? (
+                  <LessonaraShowcase alt={copy.imageAlt} />
+                ) : (
+                  <div className="product-photo">
+                    <img
+                      src="/brand/icon.svg"
+                      width={256}
+                      height={256}
+                      alt=""
+                    />
+                  </div>
+                )}
               </article>
             );
           })}
@@ -120,8 +122,14 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
             {d.principles.heading}
           </h2>
           <div className="principles">
-            {d.principles.items.map((principle) => (
+            {d.principles.items.map((principle, index) => (
               <article className="principle" key={principle.title} data-reveal>
+                <div className="principle-symbol-row">
+                  <span className="principle-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <MosaicPiece index={index} />
+                </div>
                 <h3>{principle.title}</h3>
                 <p>{principle.text}</p>
               </article>
@@ -138,7 +146,7 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
             <p>{d.contact.text}</p>
           </div>
           <a
-            className="contact-link-large"
+            className="contact-email"
             href={`mailto:${site.email}`}
             aria-label={`${d.nav.contact}: ${site.email}`}
           >
@@ -148,12 +156,24 @@ export function StudioPage({ locale, d }: { locale: Locale; d: Dictionary }) {
         </section>
       </main>
       <footer className="site-footer container">
-        <Brand footer label={d.access.home} />
-        <span>© {new Date().getFullYear()} Mosaic Labs</span>
-        <a className="back-top" href="#top">
-          {d.footer.top}
-          <span aria-hidden="true">↑</span>
-        </a>
+        <div className="footer-top">
+          <Brand footer label={d.access.home} />
+          <span>{d.footer.independent}</span>
+          <a className="back-top" href="#top">
+            {d.footer.top}
+            <span aria-hidden="true">↑</span>
+          </a>
+        </div>
+        <div className="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} Mosaic Labs. {d.footer.copyright}
+          </span>
+          <div className="footer-colors" aria-hidden="true">
+            {[0, 1, 2, 3].map((index) => (
+              <MosaicPiece index={index} key={index} />
+            ))}
+          </div>
+        </div>
       </footer>
       <Reveal />
       <script

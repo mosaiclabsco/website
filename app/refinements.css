@@ -1,0 +1,369 @@
+@font-face {
+  font-family: "Lessonara Geist";
+  src: url("/fonts/lessonara-geist-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --separator: #0f172a12;
+  --lessonara-ink: #283d39;
+  --lessonara-accent: #3e7163;
+}
+:root[data-theme="dark"] {
+  --separator: #f8f5ef14;
+}
+.hero {
+  border-bottom: 1px solid var(--separator);
+  padding-bottom: 68px;
+}
+.products-section {
+  padding-top: 62px;
+  padding-bottom: 90px;
+}
+.product-composition {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+  gap: 58px;
+}
+.product-information {
+  padding-top: 0;
+}
+.product-information h3 {
+  margin-top: 20px;
+  font-size: 45px;
+}
+.lessonara-brand-lockup {
+  --lessonara-mark-bg: var(--bg);
+  display: inline-flex;
+  gap: 13px;
+  align-items: center;
+  font-family: "Lessonara Geist", sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.048em;
+  color: var(--lessonara-ink);
+}
+.lessonara-brand-lockup > svg {
+  width: 45px;
+  height: 45px;
+  color: var(--lessonara-accent);
+  flex-shrink: 0;
+}
+.lessonara-brand-dot {
+  color: #bb8a63;
+}
+[data-theme="dark"] .lessonara-brand-lockup {
+  color: #edf2e8;
+}
+[data-theme="dark"] .lessonara-brand-lockup > svg {
+  color: #8eafa1;
+}
+.product-information .primary-button {
+  background: var(--lessonara-accent);
+}
+.product-information .primary-button:hover {
+  background: #315e51;
+}
+.lessonara-showcase {
+  background: #edf2e8;
+  border-radius: 20px;
+  padding: 48px 25px;
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.lessonara-screen {
+  width: 111%;
+  max-width: 720px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: 0 20px 45px #283d3920;
+  transform: rotate(-3deg) translateY(3px);
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.65s;
+}
+.lessonara-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.product-composition:hover .lessonara-screen {
+  transform: rotate(-1deg) translateY(-6px);
+  box-shadow: 0 25px 48px #283d3929;
+}
+.about-section {
+  border-top: 1px solid var(--separator);
+  padding-top: 74px;
+  padding-bottom: 88px;
+}
+.about-body {
+  padding-top: 44px;
+}
+.studio-signoff {
+  padding: 14px 0;
+  margin-top: 23px;
+  gap: 13px;
+}
+.philosophy-section {
+  border-top: 1px solid var(--separator);
+  padding-top: 70px;
+  padding-bottom: 86px;
+}
+.philosophy-section > h2 {
+  font-size: 49px;
+  max-width: none;
+}
+.principles {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  max-width: none;
+  margin-top: 45px;
+}
+.principle {
+  border-top: 1px solid var(--separator);
+  padding-top: 24px;
+}
+.principle:nth-child(even) {
+  margin-top: 0;
+}
+.principle-symbol-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+.principle-number {
+  font-size: 9px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.mosaic-piece {
+  --piece-size: 32px;
+  position: relative;
+  display: inline-block;
+  width: var(--piece-size);
+  height: var(--piece-size);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.mosaic-piece img {
+  position: absolute;
+  max-width: none;
+  width: calc(var(--piece-size) * 2.56);
+  height: calc(var(--piece-size) * 2.56);
+  left: calc(var(--piece-size) * -0.24);
+  top: calc(var(--piece-size) * -0.24);
+}
+.piece-1 img {
+  left: calc(var(--piece-size) * -1.26);
+}
+.piece-2 img {
+  top: calc(var(--piece-size) * -1.28);
+}
+.piece-3 img {
+  left: calc(var(--piece-size) * -1.28);
+  top: calc(var(--piece-size) * -1.28);
+}
+.principle h3 {
+  font-size: 22px;
+  line-height: 1.35;
+}
+.principle p {
+  font-size: 13px;
+  line-height: 1.85;
+  margin-top: 18px;
+}
+.contact-section {
+  border-top: 1px solid var(--separator);
+  padding-top: 70px;
+  padding-bottom: 61px;
+}
+.contact-copy h2 {
+  font-size: 53px;
+}
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 35px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 27px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ink);
+  letter-spacing: -0.02em;
+}
+.contact-email svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s;
+}
+.contact-email:hover svg {
+  transform: translate(3px, -3px);
+}
+.site-footer {
+  display: block;
+  padding-bottom: 28px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid var(--separator);
+  padding-block: 31px;
+}
+.footer-top > span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-top: 22px;
+  border-top: 1px solid var(--separator);
+  font-size: 9px;
+  color: var(--muted);
+}
+.footer-colors {
+  display: flex;
+  gap: 5px;
+}
+.footer-colors .mosaic-piece {
+  --piece-size: 11px;
+}
+@media (max-width: 1023px) {
+  .product-composition {
+    gap: 35px;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  }
+  .lessonara-showcase {
+    min-height: 350px;
+    padding: 40px 20px;
+  }
+  .product-information h3 {
+    font-size: 35px;
+  }
+  .lessonara-brand-lockup {
+    gap: 10px;
+  }
+  .lessonara-brand-lockup > svg {
+    width: 35px;
+    height: 35px;
+  }
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+  .principle h3 {
+    font-size: 23px;
+  }
+  .principle-symbol-row {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    padding-bottom: 50px;
+  }
+  .products-section {
+    padding-top: 44px;
+    padding-bottom: 55px;
+  }
+  .product-composition {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .product-information h3 {
+    font-size: 42px;
+  }
+  .lessonara-brand-lockup > svg {
+    width: 41px;
+    height: 41px;
+  }
+  .lessonara-showcase {
+    min-height: 250px;
+    padding: 37px 17px;
+    border-radius: 17px;
+  }
+  .lessonara-screen {
+    width: 108%;
+    border-width: 3px;
+    border-radius: 7px;
+  }
+  .about-section {
+    padding-top: 48px;
+    padding-bottom: 53px;
+  }
+  .about-body {
+    padding-top: 0;
+  }
+  .philosophy-section {
+    padding-top: 47px;
+    padding-bottom: 53px;
+  }
+  .philosophy-section > h2 {
+    font-size: 38px;
+  }
+  .principles {
+    grid-template-columns: 1fr 1fr;
+    gap: 29px 22px;
+    margin-top: 33px;
+  }
+  .principle {
+    padding-top: 19px;
+  }
+  .principle h3 {
+    font-size: 21px;
+  }
+  .principle p {
+    font-size: 12px;
+    margin-top: 13px;
+  }
+  .mosaic-piece {
+    --piece-size: 25px;
+  }
+  .principle-symbol-row {
+    margin-bottom: 21px;
+  }
+  .contact-section {
+    padding-top: 46px;
+    padding-bottom: 44px;
+  }
+  .contact-copy h2 {
+    font-size: 43px;
+  }
+  .contact-email {
+    font-size: 16px;
+    gap: 23px;
+    margin-top: 24px;
+  }
+  .footer-top {
+    padding-block: 25px;
+    gap: 15px;
+  }
+  .footer-top > span {
+    display: none;
+  }
+  .footer-bottom {
+    font-size: 8px;
+    gap: 15px;
+  }
+  .site-footer {
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 359px) {
+  .principles {
+    gap: 25px 17px;
+  }
+  .principle h3 {
+    font-size: 19px;
+  }
+  .contact-email {
+    font-size: 14px;
+    gap: 20px;
+  }
+}
