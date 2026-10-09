@@ -1,18 +1,16 @@
-# Mosaic Labs - studio v3
+# Mosaic Labs
 
-Third design line, based on `design/studio-v2`. Original (`design/studio-v1`) and second version are preserved in their separate worktrees.
+Final website on `main`. The local project is `/Users/gabriel/projects/mosaic-labs`. Earlier designs remain in Git history; their separate branches and worktrees have been removed.
 
-## Preview
-
-- Original: http://localhost:3040
-- V2: http://localhost:3041/pt-br
-- V3: http://localhost:3042/pt-br
+## Run locally
 
 ```sh
 npm ci
-npm run dev -- --port 3042
+npm run dev
 npm run build
 ```
+
+Open http://localhost:3000/pt-br.
 
 ## Design direction
 
