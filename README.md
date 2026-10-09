@@ -1,37 +1,104 @@
 # Mosaic Labs
 
-Final website on `main`. The local project is `/Users/gabriel/projects/mosaic-labs`. Earlier designs remain in Git history; their separate branches and worktrees have been removed.
+Site institucional da Mosaic Labs, um estúdio independente de software e produtos digitais.
 
-## Run locally
+- Site: https://mosaic-labs.co
+- Primeiro produto: [Lessonara](https://lessonara.mosaic-labs.co)
+- Contato: contact@mosaic-labs.co
+- Slogan: Build Ideas Together
+
+O site apresenta a marca, seus produtos e princípios. A versão final está na branch `main`.
+
+## Stack
+
+Next.js 16 (App Router), React 19, TypeScript e Tailwind CSS 4. As animações usam Motion e os ícones usam Phosphor.
+
+O projeto não exige banco de dados nem variáveis de ambiente. O contato abre o aplicativo de e-mail por um link `mailto:`.
+
+## Desenvolvimento local
+
+Requisitos: Node.js **20.9 ou superior** e npm. As dependências estão fixadas em `package-lock.json`.
 
 ```sh
 npm ci
 npm run dev
+```
+
+Abra http://localhost:3000/pt-br. O servidor usa a porta 3000 por padrão.
+
+Para validar a versão de produção:
+
+```sh
 npm run build
 ```
 
-Open http://localhost:3000/pt-br.
+Para servir o build localmente, depois de compilá-lo:
 
-## Design direction
+```sh
+npm run start
+```
 
-Applied Leonxlnx Taste Skill (`skills/taste-skill/SKILL.md`) and its redesign guide. Design read: an independent product studio with a graphic, asymmetric composition. Dials: DESIGN_VARIANCE 8, MOTION_INTENSITY 6, VISUAL_DENSITY 3. This is a native CSS/Tailwind aesthetic, not an imitation of an official component design system.
+Se você trocar entre commits com estruturas de rotas diferentes e encontrar erros em tipos gerados em `.next`, pare o servidor, remova somente esse diretório de cache e execute o build novamente.
 
-Clash Grotesk display typography replaces Satoshi in headings. Satoshi remains for body/UI text; the supplied logo wordmark is untouched. Fonts are served locally from the official Fontshare source. Both themes stay consistent across the page. All four original logo colors are preserved in the official symbol; interface accents use the original blue.
+## Publicação na Vercel
 
-The refined v3 restores four principles with pieces cropped directly from the original Mosaic mark, a compact email link, the two-row v2 footer, and subtle separators. The Lessonara section uses its actual logo geometry, locally served Geist typeface, green identity, and the localized interface concept restored from v1 with a restrained hover effect. Controls use pill corners. Layer scale: content 0, sticky nav 10, mobile menu 20, skip link 30.
+Importe `mosaiclabsco/website` com estas configurações:
 
-Retained the moving original SVG pieces. Motion springs implement restrained pointer response and magnetic CTA feedback outside the React render cycle. Scroll entrances use IntersectionObserver. All decorative motion respects reduced-motion preferences.
+| Configuração | Valor |
+| --- | --- |
+| Production Branch | `main` |
+| Application / Framework Preset | `Next.js` |
+| Root Directory | `./` |
+| Build, Output e Install | Padrões do preset, sem overrides |
+| Environment Variables | Nenhuma obrigatória |
 
-## Content and languages
+Para conectar `mosaic-labs.co`, adicione o domínio ao projeto na Vercel e configure na Cloudflare os registros apresentados pela Vercel. Não há infraestrutura ou DNS administrados por este repositório.
 
-Routes remain `/en`, `/pt-br`, `/fr`, `/es`, with translated metadata, canonical URLs, language alternatives and a native selector. `/` redirects to `/en`. Anchors and primary navigation remain stable. Add new products in `lib/site.ts`, with a matching slug in `products.catalog` in all four dictionaries.
+## Idiomas e SEO
 
-## Image asset
+| Idioma | Rota | Arquivo de tradução |
+| --- | --- | --- |
+| Inglês | `/en` | `lib/dictionaries/en.json` |
+| Português brasileiro | `/pt-br` | `lib/dictionaries/pt-br.json` |
+| Francês | `/fr` | `lib/dictionaries/fr.json` |
+| Espanhol | `/es` | `lib/dictionaries/es.json` |
 
-The displayed Lessonara visual is the localized planning-workspace concept from v1, adapted to the real Lessonara logo, Geist typography and green identity. It is explicitly labeled as a concept. Previous screenshot and editorial assets are retained for history but are not displayed.
+A raiz `/` redireciona para `/en`. O seletor de idioma preserva a seção atual. Cada idioma tem título, descrição, idioma do HTML, URL canônica e links para as outras traduções. O sitemap e o robots são gerados pelo Next.js.
 
-Generation prompt: “Use case: photorealistic-natural. Asset type: editorial still-life for the Lessonara education SaaS section of an independent product studio website. Create one refined real-looking editorial photograph, landscape 4:3 aspect ratio. Top-down crop with a slight angle: a navy cloth notebook opened to unmarked off-white paper, a graphite pencil, two simple small rounded-corner study cards in muted cobalt #1464C0 and coral #EF6545, a small mustard #F4B942 page tab, all carefully but naturally arranged on a cool light grey tabletop. Paper textures and gentle natural window shadows, restrained composition, tangible and understated, very high photographic quality, no contrived perfect symmetry. Focus is thoughtful lesson preparation, no people, no room, no office, no laptop or screen. The notebook and materials mostly occupy the lower-right and central frame, calm negative space in upper-left. No text, no letters, no logos, no software interface, no branded products, no watermarks, no gradients, no floating objects, no 3D CGI plastic sheen. This is conceptual editorial imagery rather than documentation of a real company’s workplace.”
+## Onde editar
 
-## Hosting
+| Conteúdo | Arquivo |
+| --- | --- |
+| Nome, domínio, e-mail e catálogo de produtos | `lib/site.ts` |
+| Textos, status dos produtos e metadados traduzidos | `lib/dictionaries/*.json` |
+| Estrutura e composição das seções | `components/studio-page.tsx` |
+| Tema, fontes, responsividade e estilos principais | `app/globals.css` |
+| Separadores, princípios, contato, rodapé e identidade do Lessonara | `app/refinements.css` |
+| Modelo de interface do Lessonara | `components/lessonara-showcase.tsx` e `app/lessonara-model.css` |
+| Logo e elementos originais da Mosaic | `public/brand/`, `lib/official-mark.ts` e `components/mosaic-piece.tsx` |
 
-Vercel Next.js preset, no environment variables. Contact remains contact@mosaic-labs.co. No DNS changes or deployments have been performed.
+Para adicionar um produto:
+
+1. Adicione seu registro em `products`, em `lib/site.ts`, com um `slug` único, nome e destino.
+2. Adicione o mesmo `slug` em `products.catalog` nos **quatro** arquivos de tradução. Inclua os campos do produto existente como referência.
+3. Se necessário, crie uma apresentação própria para o produto em `components/studio-page.tsx`. A apresentação do Lessonara é específica dele.
+4. Execute `npm run build` para conferir os tipos e a geração das quatro páginas.
+
+Os textos exibidos dos produtos vêm das traduções. Alterar apenas os campos de texto do registro em `lib/site.ts` não atualiza as descrições localizadas da página.
+
+## Identidade e comportamento
+
+- A logo original da Mosaic é preservada. As cores do símbolo são `#1464C0`, `#EF6545`, `#F4B942` e `#0B9E8A`.
+- Clash Grotesk nos títulos e Satoshi nos textos e controles. A tipografia do wordmark permanece na imagem original fornecida.
+- O Lessonara usa sua própria logo, fonte Geist e verde `#3E7163`. Sua prévia é um modelo conceitual de organização de aulas, traduzido nos quatro idiomas.
+- Fontes locais em `public/fonts/`.
+- Modos claro e escuro seguem a preferência do sistema até o visitante escolher outro tema; a escolha fica salva no navegador.
+- As animações respeitam `prefers-reduced-motion`.
+
+Os arquivos antigos em `public/images/` foram mantidos como material de referência e não são exibidos na página atual.
+
+## Estado do repositório
+
+Há uma única branch ativa, `main`, e uma única pasta local de trabalho: `/Users/gabriel/projects/mosaic-labs`. As worktrees e branches de comparação foram removidas. Os desenhos anteriores continuam acessíveis pelo histórico normal do Git.
+
+A direção final foi construída com a identidade fornecida e as referências visuais do briefing, com apoio do [Taste Skill](https://github.com/Leonxlnx/taste-skill). O conteúdo deve continuar transparente sobre o estágio dos produtos, sem inventar clientes, depoimentos ou métricas.
