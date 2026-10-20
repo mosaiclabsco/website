@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { dictionaries } from "@/lib/dictionaries";
 import { isLocale, locales, languageTags } from "@/lib/locales";
 import { site } from "@/lib/site";
@@ -82,7 +84,11 @@ export default async function LocaleLayout({ children, params }: Props) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
