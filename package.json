@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node --version && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
@@ -13,9 +13,9 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "motion": "^14.0.0",
-    "next": "16.4.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",
@@ -24,5 +24,8 @@
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
