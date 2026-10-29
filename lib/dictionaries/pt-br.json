@@ -13,9 +13,7 @@
   "access": {
     "skip": "Ir para o conteúdo",
     "home": "Mosaic Labs - início",
-    "theme": "Alternar modo escuro",
     "open": "Abrir navegação",
-    "close": "Fechar navegação",
     "newTab": "abre em uma nova aba",
     "art": "Mova o cursor para aproximar as peças"
   },
@@ -28,6 +26,13 @@
     "note": "Construímos ideias juntos",
     "caption": "Peças individuais. Possibilidades em comum.",
     "scroll": "Role para explorar"
+  },
+  "wall": {
+    "hint": "a parede se reorganiza sozinha. passe o mouse para colocar suas peças.",
+    "count": "peças",
+    "pause": "pausar",
+    "play": "continuar",
+    "clear": "limpar"
   },
   "studio": {
     "label": "O estúdio",
@@ -88,23 +93,5 @@
     "independent": "Independentes por escolha.",
     "top": "Voltar ao topo",
     "copyright": "Todos os direitos reservados."
-  },
-  "preview": {
-    "label": "Seu espaço de ensino",
-    "overview": "Visão geral",
-    "lessons": "Aulas",
-    "students": "Alunos",
-    "materials": "Materiais",
-    "heading": "Um bom dia para ensinar.",
-    "subtitle": "Tudo que você precisa. Um pouco menos de ruído.",
-    "week": "Seu plano de aulas",
-    "days": ["SEG", "TER", "QUA"],
-    "conversation": "Conversação",
-    "activity": "Atividade",
-    "lesson": "Aula",
-    "speaking": "Vamos falar de ideias",
-    "vocabulary": "Palavras em contexto",
-    "english": "Inglês do dia a dia",
-    "bottom": "Seus materiais, juntos."
   }
 }

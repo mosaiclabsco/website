@@ -13,9 +13,7 @@
   "access": {
     "skip": "Aller au contenu",
     "home": "Mosaic Labs - accueil",
-    "theme": "Activer ou désactiver le mode sombre",
     "open": "Ouvrir la navigation",
-    "close": "Fermer la navigation",
     "newTab": "s’ouvre dans un nouvel onglet",
     "art": "Déplacez le curseur pour rapprocher les pièces"
   },
@@ -28,6 +26,13 @@
     "note": "Construisons nos idées ensemble",
     "caption": "Des pièces individuelles. Des possibilités partagées.",
     "scroll": "Défiler pour découvrir"
+  },
+  "wall": {
+    "hint": "le mur se réorganise tout seul. survolez-le pour poser vos tesselles.",
+    "count": "tesselles",
+    "pause": "pause",
+    "play": "lecture",
+    "clear": "effacer"
   },
   "studio": {
     "label": "Le studio",
@@ -88,23 +93,5 @@
     "independent": "Indépendants par choix.",
     "top": "Retour en haut",
     "copyright": "Tous droits réservés."
-  },
-  "preview": {
-    "label": "Votre espace d’enseignement",
-    "overview": "Vue d’ensemble",
-    "lessons": "Cours",
-    "students": "Élèves",
-    "materials": "Supports",
-    "heading": "Une belle journée pour enseigner.",
-    "subtitle": "Tout ce qu’il vous faut. Un peu moins de bruit.",
-    "week": "Votre plan de cours",
-    "days": ["LUN", "MAR", "MER"],
-    "conversation": "Conversation",
-    "activity": "Activité",
-    "lesson": "Cours",
-    "speaking": "Parlons de nos idées",
-    "vocabulary": "Les mots en contexte",
-    "english": "L’anglais au quotidien",
-    "bottom": "Vos supports, réunis."
   }
 }

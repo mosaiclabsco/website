@@ -2,12 +2,22 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import { dictionaries } from "@/lib/dictionaries";
 import { isLocale, locales, languageTags } from "@/lib/locales";
 import { site } from "@/lib/site";
 import "../globals.css";
-import "../refinements.css";
-import "../lessonara-model.css";
+
+const mono = JetBrains_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+});
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"],
+  weight: "800",
+  variable: "--font-bricolage",
+});
 
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 export function generateStaticParams() {
@@ -59,16 +69,17 @@ export async function generateMetadata({
   };
 }
 
-export const viewport: Viewport = { themeColor: "#0F172A" };
-const themeScript = `(function(){try{var t=localStorage.getItem('mosaic-theme');document.documentElement.dataset.theme=t==='dark'||t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}})()`;
+export const viewport: Viewport = { themeColor: "#F8F5EF" };
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   return (
-    <html lang={languageTags[locale]} suppressHydrationWarning>
+    <html
+      lang={languageTags[locale]}
+      className={`${mono.variable} ${bricolage.variable}`}
+    >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link
           rel="preload"
           href="/fonts/satoshi-400.woff2"
@@ -78,7 +89,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link
           rel="preload"
-          href="/fonts/clash-grotesk-500.woff2"
+          href="/fonts/clash-grotesk-600.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

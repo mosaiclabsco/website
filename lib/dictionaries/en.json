@@ -13,9 +13,7 @@
   "access": {
     "skip": "Skip to content",
     "home": "Mosaic Labs - home",
-    "theme": "Toggle dark mode",
     "open": "Open navigation",
-    "close": "Close navigation",
     "newTab": "opens in a new tab",
     "art": "Move your pointer to bring the pieces together"
   },
@@ -28,6 +26,13 @@
     "note": "Build Ideas Together",
     "caption": "Individual pieces. Shared possibilities.",
     "scroll": "Scroll to explore"
+  },
+  "wall": {
+    "hint": "the wall rearranges itself. hover to lay your own tiles.",
+    "count": "tesserae",
+    "pause": "pause",
+    "play": "play",
+    "clear": "clear"
   },
   "studio": {
     "label": "The studio",
@@ -88,23 +93,5 @@
     "independent": "Independent by design.",
     "top": "Back to top",
     "copyright": "All rights reserved."
-  },
-  "preview": {
-    "label": "Your teaching space",
-    "overview": "Overview",
-    "lessons": "Lessons",
-    "students": "Students",
-    "materials": "Materials",
-    "heading": "A good day to teach.",
-    "subtitle": "Everything you need. A little less noise.",
-    "week": "Your lesson plan",
-    "days": ["MON", "TUE", "WED"],
-    "conversation": "Conversation",
-    "activity": "Activity",
-    "lesson": "Lesson",
-    "speaking": "Let’s talk about ideas",
-    "vocabulary": "Words in context",
-    "english": "Everyday English",
-    "bottom": "Your materials, together."
   }
 }

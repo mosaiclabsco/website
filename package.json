@@ -9,20 +9,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.10",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "motion": "^14.0.0",
     "next": "16.4.3",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "tailwindcss": "^4.1.0",
     "typescript": "^5.9.0"
   },
   "engines": {

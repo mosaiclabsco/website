@@ -11,7 +11,7 @@ O site apresenta a marca, seus produtos e princípios. A versão final está na 
 
 ## Stack
 
-Next.js 16 (App Router), React 19, TypeScript e Tailwind CSS 4. As animações usam Motion e os ícones usam Phosphor.
+Next.js 16 (App Router), React 19 e TypeScript. Os estilos ficam em CSS Modules, sem framework de CSS nem biblioteca de animação.
 
 O projeto não exige banco de dados nem variáveis de ambiente. O contato abre o aplicativo de e-mail por um link `mailto:`.
 
@@ -72,10 +72,11 @@ A raiz `/` redireciona para `/en`. O seletor de idioma preserva a seção atual.
 | Nome, domínio, e-mail e catálogo de produtos | `lib/site.ts` |
 | Textos, status dos produtos e metadados traduzidos | `lib/dictionaries/*.json` |
 | Estrutura e composição das seções | `components/studio-page.tsx` |
-| Tema, fontes, responsividade e estilos principais | `app/globals.css` |
-| Separadores, princípios, contato, rodapé e identidade do Lessonara | `app/refinements.css` |
-| Modelo de interface do Lessonara | `components/lessonara-showcase.tsx` e `app/lessonara-model.css` |
-| Logo e elementos originais da Mosaic | `public/brand/`, `lib/official-mark.ts` e `components/mosaic-piece.tsx` |
+| Estilos, responsividade e animações da página | `components/studio-page.module.css` |
+| Parede de peças do topo (automática e interativa) | `components/tile-wall.tsx` |
+| Seletor de idioma | `components/language-select.tsx` |
+| Fontes locais e estilos base | `app/globals.css` |
+| Logo e geometria das quatro peças da Mosaic | `public/brand/` e `lib/mark.ts` |
 
 Para adicionar um produto:
 
@@ -89,13 +90,13 @@ Os textos exibidos dos produtos vêm das traduções. Alterar apenas os campos d
 ## Identidade e comportamento
 
 - A logo original da Mosaic é preservada. As cores do símbolo são `#1464C0`, `#EF6545`, `#F4B942` e `#0B9E8A`.
-- Clash Grotesk nos títulos e Satoshi nos textos e controles. A tipografia do wordmark permanece na imagem original fornecida.
-- O Lessonara usa sua própria logo, fonte Geist e verde `#3E7163`. Sua prévia é um modelo conceitual de organização de aulas, traduzido nos quatro idiomas.
-- Fontes locais em `public/fonts/`.
-- Modos claro e escuro seguem a preferência do sistema até o visitante escolher outro tema; a escolha fica salva no navegador.
-- As animações respeitam `prefers-reduced-motion`.
+- Clash Grotesk nos títulos e Satoshi nos textos e controles, com fontes locais em `public/fonts/`. JetBrains Mono (rótulos) e Bricolage Grotesque (títulos dos princípios) vêm do `next/font`. A tipografia do wordmark permanece na imagem original fornecida.
+- O topo é uma parede de 8×8 peças com as formas da logo: ela se reorganiza sozinha, em torno de 40 peças preenchidas, e o visitante também pinta passando o mouse ou tocando. Pode ser pausada.
+- O Lessonara aparece com o verde `#3E7163` e a tela real de entrada (`public/images/lessonara-login.png`).
+- O site tem só o tema claro.
+- As animações respeitam `prefers-reduced-motion`; com ela ativa, a parede não se move sozinha.
 
-Os arquivos antigos em `public/images/` foram mantidos como material de referência e não são exibidos na página atual.
+`public/images/lessonara-editorial.png` foi mantida como material de referência e não é exibida na página atual.
 
 ## Estado do repositório
 
